@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Your Fav - Minimalist Chat</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="landing-container">
+        <a href="index.html" class="whatsapp-image-link">
+            <img src="images/whatsapp.png" alt="Click to Chat with Your Fav" class="whatsapp-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <p class="fallback-text" style="display: none;">Click here to Chat with Your Fav</p>
+        </a>
+
+        <blockquote class="tagline">
+            "Simple conversations, meaningful connections." <br>
+            - A minimalist chat app inspired by WhatsApp.
+        </blockquote>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const landingContainer = document.querySelector('.landing-container');
+            landingContainer.style.opacity = 0;
+            landingContainer.style.transform = 'translateY(20px)';
+            landingContainer.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+
+            setTimeout(() => {
+                landingContainer.style.opacity = 1;
+                landingContainer.style.transform = 'translateY(0)';
+            }, 200);
+        });
+    </script>
+
+</body>
+</html>

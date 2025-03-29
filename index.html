@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirp - Modern Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="app-container">
+
+        <aside class="sidebar">
+            <div class="profile-header">
+                <img src="images/pic2.png" alt="User Profile" class="profile-image">
+                <div class="profile-info">
+                    <h3>Alex Morgan</h3>
+                    <p><i class="fas fa-circle-dot fa-xs"></i> Online</p>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <button><i class="fas fa-search"></i></button>
+                <input type="text" id="search-input" placeholder="Search conversations...">
+            </div>
+
+            <ul class="contact-list">
+                <li><a href="#" data-contact="John Doe" data-last-message="Hey, how are you?" data-last-message-time="10:42 AM" data-unread="2" class="active">
+                    <img src="images/pic1.png" alt="John Doe" class="contact-image">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span style="font-weight: 600;">John Doe</span>
+                            <span style="font-size: 0.75em; color: #a1a8b3;">10:42 AM</span>
+                        </div>
+                        <div class="last-message">Hey, how are you?</div>
+                    </div>
+                    <span class="unread-badge">2</span>
+                </a></li>
+                <li><a href="#" data-contact="Jane Smith" data-last-message="Hi there!" data-last-message-time="Yesterday">
+                    <img src="images/f1.jpg" alt="Jane Smith" class="contact-image">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span style="font-weight: 600;">Jane Smith</span>
+                            <span style="font-size: 0.75em; color: #a1a8b3;">Yesterday</span>
+                        </div>
+                        <div class="last-message">Hi there!</div>
+                    </div>
+                </a></li>
+                <li><a href="#" data-contact="Alice Brown" data-last-message="Let's meet tomorrow!" data-last-message-time="Monday">
+                    <img src="images/bg7.jpg" alt="Alice Brown" class="contact-image">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span style="font-weight: 600;">Alice Brown</span>
+                            <span style="font-size: 0.75em; color: #a1a8b3;">Monday</span>
+                        </div>
+                        <div class="last-message">Let's meet tomorrow!</div>
+                    </div>
+                </a></li>
+                <li><a href="#" data-contact="Mike Johnson" data-last-message="Thanks for the help!" data-last-message-time="Feb 12">
+                    <img src="images/idea.png" alt="Mike Johnson" class="contact-image">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span style="font-weight: 600;">Mike Johnson</span>
+                            <span style="font-size: 0.75em; color: #a1a8b3;">Feb 12</span>
+                        </div>
+                        <div class="last-message">Thanks for the help!</div>
+                    </div>
+                </a></li>
+            </ul>
+        </aside>
+
+        <main class="chat-area">
+            <div id="chat-header" class="chat-header">
+                <div class="contact-details">
+                    <img id="chat-header-image" src="images/pic1.png" alt="Contact Avatar" class="contact-image">
+                    <div>
+                        <span id="chat-header-name">John Doe</span>
+                        <div style="font-size: 0.8em; color: #5ed5a8; margin-top: 2px;">
+                            <i class="fas fa-circle-dot fa-xs"></i> Online
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-actions">
+                    <button><i class="fas fa-phone"></i></button>
+                    <button><i class="fas fa-video"></i></button>
+                    <button><i class="fas fa-ellipsis-vertical"></i></button>
+                </div>
+            </div>
+
+            <div id="message-area" class="message-area">
+                <!-- Sample messages to show design -->
+                <div class="message received">
+                    Hey, how are you?
+                    <div class="message-time">10:30 AM</div>
+                </div>
+                <div class="message sent">
+                    I'm good, thanks! How about you?
+                    <div class="message-time">10:32 AM</div>
+                </div>
+                <div class="message received">
+                    Doing great! Are we still meeting for coffee tomorrow?
+                    <div class="message-time">10:35 AM</div>
+                </div>
+                <div class="message sent">
+                    Absolutely! Looking forward to it. Same place at 2pm?
+                    <div class="message-time">10:36 AM</div>
+                </div>
+                <div class="message received">
+                    Perfect! See you then.
+                    <div class="message-time">10:42 AM</div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="message-input" placeholder="Type your message...">
+                <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

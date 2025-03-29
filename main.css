@@ -1,0 +1,66 @@
+/* main.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;  /* Soft, light background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    color: #495057; /* Slightly lighter text */
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.landing-container {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    max-width: 800px;
+    width: 90%;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-image-link {
+    display: block;
+    max-width: 400px; /* Adjust as needed */
+    width: 100%;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+
+.whatsapp-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.whatsapp-image:hover {
+    opacity: 0.9;
+}
+
+.fallback-text {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.tagline {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #6c757d;
+    margin-top: 30px;
+    line-height: 1.6;
+}
